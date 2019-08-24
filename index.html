@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Engineers's Gurukul</title>
+    </head>
+    <link rel="icon" href="images/EGLogo0.png">
+    <link  rel="stylesheet" href="index.css">
+    <body>
+        <div class="loginDiv">
+            <div class="login">
+                     <div class="card">
+                        <img src="images/EGLogo0.png" style="width:60%;">
+                        <h2>Log In</h2>
+                         <input type="email" id="emailid" placeholder="E-mail" required>
+                        <input type="password" id="password" placeholder="Password" required> 
+                        <p class="title">Good customer service costs less than bad customer service</p>
+                        <p><button type="submit" id="submit_button" onclick="login()">Log In</button></p>
+                    </div>
+            </div>    
+        </div>
+        
+        <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script> 
+         <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
+        
+        <script>
+            var firebaseConfig = {
+                apiKey: "AIzaSyAxwZ-gSOJWId_yF76hmDKIyuV7Zy4R8ck",
+                authDomain: "engineersgurukul-e8d60.firebaseapp.com",
+                databaseURL: "https://engineersgurukul-e8d60.firebaseio.com",
+                projectId: "engineersgurukul-e8d60",
+                storageBucket: "engineersgurukul-e8d60.appspot.com",
+                messagingSenderId: "605778634486",
+                appId: "1:605778634486:web:75b1f05b5a08af03"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+        </script>
+        <script src="main.js"></script>
+    </body>
+</html>

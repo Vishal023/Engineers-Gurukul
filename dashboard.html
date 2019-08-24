@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Engineer's Gurukul</title>
+    </head>
+    <link rel="icon" href="images/EGLogo0.png">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <body>
+        <div class="logo">
+            <img src="images/EGLogo0.png">
+        </div>
+        <div class="header">
+            <div class="headercontainer">
+                <div class="subheader" id="updateevents" onclick="update()">Update Events</div>
+                <div class="subheader" id="courseprice" onclick="price()">Course Price</div>
+                <div class="subheader" id="test" onclick="test()">Test</div>
+            </div>
+        </div>
+        <div class="main-container">
+        <div class="container" id="container_event">
+            <div class="card">
+                <img src="images/EGLogo.png" style="width:90%;">
+                <h3 id="cardhead">ENTER EVENT DETAILS</h3>
+                <input type="text" placeholder="Event Name" id="eventname">
+                <input type="date" id="eventdate">
+                <input type="text" id="eventloc" placeholder="Event Location">
+                <textarea id="eventdetails" placeholder="Event Details"></textarea>
+                <p><button type="submit" id="submit_button" onclick="submit()">Submit</button></p>
+            </div>
+        </div>
+        
+        
+        <div class="container" id="container_price">
+            <div class="card">
+                <img src="images/EGLogo.png" style="width:90%;">
+                <h3 id="cardhead">ENTER COURSE PRICE</h3>
+                <input type="text" placeholder="Course Name" id="coursename">
+                <input type="number" id="courseprice" placeholder="Course Price">
+                <textarea id="coursedetails" placeholder="Course Details"></textarea>
+                <p><button type="submit" id="submit_course_button" onclick="submitCourse()">Submit</button></p>
+            </div>
+        </div>
+        <div class="container" id="testcontainer">
+            <iframe
+                    allow="microphone;"
+                    width="350"
+                    height="430"
+                    src="https://console.dialogflow.com/api-client/demo/embedded/35549091-35f5-42ef-b73d-7c8aeeeda727">
+            </iframe>
+      
+        </div>
+        </div>
+        <div class="footer">
+            <div>
+                <button type="submit" id="signoutbtn" onclick="logout()">Log Out</button>
+            </div>
+        </div>
+        <!---
+        <div class="foot">
+            <h2 style="color: white">
+                ENGINEERS 
+                <span style="color:#38ef7d">&nbsp;&nbsp;&nbsp;GURUKUL</span>
+            </h2>
+            <p style="color: white">
+                Engineers Gurukul is an Educational institute. 
+            </p>
+            <br/>
+            <div class="socialbar">
+               <p>Follow Us on</p>
+    
+                    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+            
+                    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a> 
+             
+                   <a href="#" class="google"><i class="fa fa-google"></i></a>  
+              
+                    <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+             
+                   <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>        
+                    <input type="search" placeholder="Search..">
+
+                    <button type="submit"><i class="fa fa-search"></i></button>
+            </div>
+            <br/>
+            <div class="contactdetailsfoot"> 
+                <p class="contactfoot">Contact Details - </p>
+                <p>Vishal Singh</p>
+                <p>Phone Number  : +91 884 026 1170</p>
+                <p>+91 739 095 8355 - </p>
+                <p>E-mail Id :<a href="#" style="text-decoration: none;color: aliceblue;">v.singh.kld@gmail.com</a></p>
+            </div>
+            <center style="font-size: 25px">&#9679; ENGINEERS GURUKUL &#9679;</center>
+        </div>
+        --->
+        <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script> 
+         <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
+        <script>
+            var firebaseConfig = {
+                apiKey: "AIzaSyAxwZ-gSOJWId_yF76hmDKIyuV7Zy4R8ck",
+                authDomain: "engineersgurukul-e8d60.firebaseapp.com",
+                databaseURL: "https://engineersgurukul-e8d60.firebaseio.com",
+                projectId: "engineersgurukul-e8d60",
+                storageBucket: "engineersgurukul-e8d60.appspot.com",
+                messagingSenderId: "605778634486",
+                appId: "1:605778634486:web:75b1f05b5a08af03"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+        </script>
+   
+        <script src="main.js"></script>
+    </body>
+</html>
